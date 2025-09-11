@@ -13,9 +13,15 @@
 3. 2번의 문제를 해결하기 위해 @AfterEach를 사용하여 각 메서드마다 테스트 후 사용된 데이터를 초기화
 4. @BeforeEach는 @AfterEach와 반대로 각 메서드마다 테스트 전 동작하는 방식
 
-- Spring Bean Chapter
+- Spring Bean Chapter 1 (@Controller + @Service + @Repository)
 1. @SpringBootApplication 어노테이션을 기반하여 실행된 클래스가 존재하는 패키지 내에서만 컴포넌트 스캔이 발생
 2. @Controller, @Service, @Repository는 각각의 어노테이션 필수 (해당 세가지 어노테이션은 기본적으로 @Component를 내재)
-3. 어노테이션을 기반하여 컴포넌트 스캔이 발생하고 @Autowired가 생성자의 매개변수를 자동으로 연결
+3. 어노테이션을 기반하여 컴포넌트 스캔이 발생하고 @Autowired가 생성자의 매개변수를 자동으로 연결 (가장 권장되는 방식)
 4. Spring Bean은 Spring Container에 등록될 때, 기본적으로 객체의 인스턴스를 한개만 등록
-5. 4번에 의거, 같은 Spring Bean일 경우, 모두 같은 인스턴스
+5. 4번에 의거하여 같은 Spring Bean일 경우, 모두 같은 인스턴스
+
+- Spring Bean Chapter 2 (@Controller + @Configuration + @Bean)
+1. @Configuration, @Bean 어노테이션을 이용해 Java 코드로 Spring Bean 의존성을 직접 주입도 가능
+2. @Autowired를 생성자가 아닌 필드 어노테이션으로 선언도 가능 (권장되지 않는 방식)
+3. @Autowired를 생성자가 아닌 Setter Injection 방식 어노테이션으로 선언도 가능 (권장되지 않는 방식)
+4. @Autowired는 Spring Bean Chapter 1, 2 어노테이션 방식을 이용하여 의존성을 주입하였을 경우에만 동작

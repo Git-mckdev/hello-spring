@@ -4,12 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import com.overflow.hello_spring.domain.Member;
 import com.overflow.hello_spring.repository.MemberRepository;
 
-@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
