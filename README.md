@@ -32,3 +32,8 @@
 3. html 요소의 속성 중 name="name" 과 같은 형태는 "" 안에 있는 이름을 컨트롤러에서 객체의 속성으로 인식
 4. @Controller는 Model 객체에 "addAttribute" 메소드를 사용하여 View 템플릿에 전달한 데이터를 담음
 5. 4번에 의거하여 View 리졸버가 View 템플릿을 찾고 Thymeleaf가 이 데이터를 렌더링
+
+- DB Chapter
+1. build.gradle에 의존성을 추가하여 DB 라이브러리 사용
+2. application.properties에 DB 연결에 필요한 속성들을 추가
+3. DataSource도 Spring을 사용하여 @Configuration에서 @Autowired 방식으로 주입 받을 수 있음
