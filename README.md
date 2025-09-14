@@ -25,3 +25,10 @@
 2. @Autowired를 생성자가 아닌 필드 어노테이션으로 선언도 가능 (권장되지 않는 방식)
 3. @Autowired를 생성자가 아닌 Setter Injection 방식 어노테이션으로 선언도 가능 (권장되지 않는 방식)
 4. @Autowired는 Spring Bean Chapter 1, 2 어노테이션 방식을 이용하여 의존성을 주입하였을 경우에만 동작
+
+- Member Chapter
+1. 스프링 MVC는 요청 처리 시 @Controller 매핑을 먼저 찾고, 없으면 정적 자원을 찾음
+2. GET 메소드는 정보 조회, POST 메소드는 데이터 생성 및 변경 등에 사용
+3. html 요소의 속성 중 name="name" 과 같은 형태는 "" 안에 있는 이름을 컨트롤러에서 객체의 속성으로 인식
+4. @Controller는 Model 객체에 "addAttribute" 메소드를 사용하여 View 템플릿에 전달한 데이터를 담음
+5. 4번에 의거하여 View 리졸버가 View 템플릿을 찾고 Thymeleaf가 이 데이터를 렌더링
