@@ -40,3 +40,11 @@
 
 - JDBC, JDBC Template, MyBatis, JPA, Spring Data JPA Chapter
 1. JDBC, JDBC Template, MyBatis, JPA, Spring Data JPA 등 다양한 방식이 있음
+
+- AOP Chapter
+1. @Aspect 어노테이션을 통해 AOP 클래스 명시 가능
+2. @Configuration 의존성을 지닌 클래스 내에서 @Bean 어노테이션을 통해 AOP 클래스에 Spring Bean 의존성 주입
+3. 2번 방법이 아닌 AOP 클래스에 자체에 @Component 어노테이션을 명시하는 방법으로도 사용 가능
+4. AOP 클래스는 병목 현상이 발생하는 문제 지점을 파악하는 등에 사용
+5. 원하는 패키지 경로를 "@Around("execution(* com.overflow.hello_spring..*(..))")" 와 같이 어노테이션 선언
+6. 5번에 의거하여 경로 설정에 따라 특정 패키지 등 AOP 범위를 조정할 수 있음
