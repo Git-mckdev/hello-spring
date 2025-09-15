@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.overflow.hello_spring.domain.Member;
 import com.overflow.hello_spring.service.MemberService;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 
 @Controller
 public class MemberController {
+    
     private final MemberService memberService;
 
     @Autowired

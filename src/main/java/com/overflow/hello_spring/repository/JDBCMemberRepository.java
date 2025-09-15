@@ -14,11 +14,11 @@ import org.springframework.jdbc.datasource.DataSourceUtils;
 
 import com.overflow.hello_spring.domain.Member;
 
-public class JDBCMemberRepository implements MemberRepository {
-    
+public class JdbcMemberRepository implements MemberRepository {
+
     private final DataSource dataSource;
 
-    public JDBCMemberRepository(DataSource dataSource) {
+    public JdbcMemberRepository(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
@@ -145,7 +145,7 @@ public class JDBCMemberRepository implements MemberRepository {
         return members;
     }
 
-    public void close(Connection con, PreparedStatement ps, ResultSet rs) {
+    private void close(Connection con, PreparedStatement ps, ResultSet rs) {
         try {
             if (rs != null) {
                 rs.close();
@@ -169,7 +169,7 @@ public class JDBCMemberRepository implements MemberRepository {
         }
     }
 
-    public Connection getConnection() throws SQLException {
+    private Connection getConnection() throws SQLException {
         return DataSourceUtils.getConnection(dataSource);
     }
 }

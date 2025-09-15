@@ -37,3 +37,6 @@
 1. build.gradle에 의존성을 추가하여 DB 라이브러리 사용
 2. application.properties에 DB 연결에 필요한 속성들을 추가
 3. DataSource도 Spring을 사용하여 @Configuration에서 @Autowired 방식으로 주입 받을 수 있음
+
+- JDBC, JDBC Template, MyBatis, JPA, Spring Data JPA Chapter
+1. JDBC, JDBC Template, MyBatis, JPA, Spring Data JPA 등 다양한 방식이 있음
